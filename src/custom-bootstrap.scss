@@ -1,0 +1,32 @@
+// Override Bootstrap color variables
+$primary: #3367d1;
+$secondary: #d81b47;
+$success: #7ed585;
+$info: #5C636A;
+$warning: #facb3c;
+$danger: #d30c3a;
+$light: #f2eee2;
+$dark: #292d33;
+
+// Define custom colors
+$dinosaur: #5d59a6;
+$sakura: #faaca8;
+$dark-success: #21994d;
+
+// Add custom colors to Bootstrap's theme color map
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "success": $success,
+  "info": $info,
+  "warning": $warning,
+  "danger": $danger,
+  "light": $light,
+  "dark": $dark,
+  "dinosaur": $dinosaur,
+  "sakura": $sakura,
+  "dark-success": $dark-success,
+);
+
+// Import Bootstrap's SCSS
+@import 'bootstrap/scss/bootstrap';

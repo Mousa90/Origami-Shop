@@ -1,1 +1,162 @@
 /* You can add global styles to this file, and also import other style files */
+/* Default styles for all screen sizes */
+
+.test1 {background-color: blueviolet;}
+.test2 {background-color: rgb(230, 178, 23);}
+.test3 {background-color: rgb(43, 226, 128);}
+
+:root {
+    --primary: #3367d1;
+    --secondary: #d81b47;
+    --success: #7ed585;
+    --dark-success: #21994d;
+    --info: #5C636A;
+    --warning: #facb3c;
+    --selection: #f1a901;
+    --danger: #d30c3a ;
+    --light: #f2eee2;
+    --dark: #292d33;
+    --dinosaur: #5d59a6;
+    --sakura: #faaca8;
+  }
+
+/* Selection Styling */
+::selection {
+    background-color: var(--selection);
+    color: white;
+}
+
+/* Apply custom scrollbar for WebKit browsers (Chrome, Safari, Edge) */
+::-webkit-scrollbar {
+    width: 16px !important;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--dark) !important;
+    border: 1px solid var(--dark) !important;
+}
+
+::-webkit-scrollbar-thumb {
+    border-radius: 8px !important;
+    border: 3px solid transparent !important;
+    background-clip: content-box !important;
+    background-color: #9ea0a3 !important;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: #c9cacc !important;
+}
+
+::-webkit-scrollbar-thumb:active {
+    background-color: var(--warning) !important;
+}
+
+/* Apply custom scrollbar for Firefox-only */
+@-moz-document url-prefix() {
+    * {
+        scrollbar-width: thin; /* Options: auto, thin, none */
+        scrollbar-color: var(--warning) var(--dark); /* thumb color, track color */
+    }
+}
+
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; font-size: medium; }
+
+.mat-elevation-z8 {box-shadow: none;}
+.child-center {margin: 0 auto !important;}
+
+input[type="text"], input[type="number"], select, button, a, i {
+    transition: all 0.3s ease;
+}
+
+input[type="text"]:focus, input[type="number"]:focus, select:focus {
+    border: 1px solid var(--primary) !important;
+    outline: none;
+}
+
+input[type="text"]:hover, input[type="number"]:hover, select:hover {
+    border: 1px solid var(--warning) !important;
+    outline: none;
+}
+
+.border-danger {
+    border: 1px solid var(--danger);
+  }
+
+select:hover {
+    cursor: pointer;
+}
+
+.btn-secondary {
+    color: white !important;
+}
+
+.fw-semi-bold{
+    font-weight: 500;
+}
+
+.col-2-5 {
+    flex: 0 0 calc(2.5 * (100% / 12));
+    max-width: calc(2.5 * (100% / 12));
+}
+
+.col-1-5 {
+    flex: 0 0 calc(1.5 * (100% / 12));
+    max-width: calc(1.5 * (100% / 12));
+}
+
+.col-0-5 {
+    flex: 0 0 calc(0.5 * (100% / 12));
+    max-width: calc(0.5 * (100% / 12));
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+  }
+  
+  /* Large devices (desktops, 993px to 1200px) */
+  @media only screen and (min-width: 993px) and (max-width: 1199px) {
+ 
+  }
+  
+  /* Medium devices (tablets, 769px to 992px) */
+  @media only screen and (min-width: 769px) and (max-width: 992px) {
+
+  }
+  
+  /* Small devices (tablets and small phones, 576px to 768px) */
+  @media only screen and (min-width: 577px) and (max-width: 768px) {
+
+  }
+  
+  /* Extra small devices (small phones, 480px to 576px) */
+  @media only screen and (min-width: 481px) and (max-width: 576px) {
+    table, th, td, .btn, .mat-mdc-select-value, .modal, .card-text, label, .form-control, div, ngb-toast {
+        font-size: 14px !important;
+    }
+    .card-title {
+        font-size: 17px !important;
+    }
+  }
+  
+  /* Very small devices (phones, 480px and below) */
+  @media only screen and (max-width: 480px) {
+    table, th, td, .btn, .mat-mdc-select-value, .modal, .card-text, label, .form-control, div, ngb-toast {
+        font-size: 14px !important;
+    }
+    .card-title {
+        font-size: 17px !important;
+    }
+  }
+  
+  /* Extremely small devices (phones, 400px and below) */
+  @media only screen and (max-width: 400px) {
+    table, th, td, .btn,.mat-mdc-select-value, .modal, .card-text, label, .form-control, div, ngb-toast {
+        font-size: 13.5px !important;
+    }
+    .card-title {
+        font-size: 16px !important;
+    }
+  }

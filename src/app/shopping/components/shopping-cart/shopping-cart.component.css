@@ -1,0 +1,121 @@
+/* Default styles for all screen sizes */
+.thumbnail {
+  height: 80px;
+  width: 80px;
+  border-radius: 100%;
+  object-fit: cover;
+}
+
+.center-text-flexbox {
+  display: flex;
+  align-items: center;
+  height: 78px; /* Adjust as needed */
+}
+
+.center-text-flexbox.left {
+  justify-content: left;
+}
+
+.center-text-flexbox.center {
+  justify-content: center;
+}
+
+.center-text-flexbox.right {
+  justify-content: right;
+}
+
+.thumbnail {
+  border: 2px solid var(--secondary);
+}
+
+.btn-primary {
+  transition: all 0.3s ease;
+  margin: 2px;
+}
+
+.btn-primary:hover {
+  transform: scale(1.05); /* Slightly enlarge the button */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow for a pop-up effect */
+}
+
+.btn-light:hover {
+  border: 1px solid gray !important;
+}
+
+.border-pink {
+  border: 1px solid rgb(218, 119, 160) !important;
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .shopping-cart {
+    width: 1050px;
+  }
+
+}
+
+/* Large devices (desktops, 993px to 1200px) */
+@media only screen and (min-width: 993px) and (max-width: 1199px) {
+
+}
+
+/* Medium devices (tablets, 769px to 992px) */
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+
+}
+
+/* Small devices (tablets and small phones, 576px to 768px) */
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+  .hide-on-small {
+    display: none;
+  }
+  .title {
+    width: calc(7 * (100% / 12));
+  }
+  .price {
+    width: calc(2 * (100% / 12));
+  }
+}
+
+/* Extra small devices (small phones, 480px to 576px) */
+@media only screen and (min-width: 481px) and (max-width: 576px) {
+  .hide-on-small {
+    display: none;
+  }
+  .title {
+    width: calc(7 * (100% / 12));
+  }
+  .price {
+    width: calc(2 * (100% / 12));
+  }
+  .btn-light {
+    font-size: 13.5px !important;
+  }
+}
+
+  /* Very small devices (phones, 480px and below) */
+  @media only screen and (max-width: 480px) {
+  .btn-primary {
+    width: 100%;
+  }
+  .hide-on-small {
+    display: none;
+  }
+  .title {
+    width: calc(7 * (100% / 12));
+  }
+  .price {
+    width: calc(2 * (100% / 12));
+  }
+  .btn-light {
+    font-size: 13px !important;
+  }
+}
+
+/* Extremely small devices (phones, 460px and below) */
+@media only screen and (max-width: 460px) {
+  .btn-clear {
+    width: 100%;
+    margin-top: 5px;
+  }
+}

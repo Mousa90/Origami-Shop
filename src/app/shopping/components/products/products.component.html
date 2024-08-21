@@ -1,0 +1,19 @@
+<div class="row shopping-page">
+  <div class="col-3 filter-size">
+    <product-filter [category]="category"></product-filter>
+  </div>
+  <div class="col center-container cards-size">
+    <div class="row" *ngIf="cart$ | async as cart">
+      <ng-container *ngFor="let p of paginatedProducts">
+        <div class="col-4 card-size">
+          <product-card [product]="p" [shopping-cart]="cart"></product-card>
+        </div>
+      </ng-container>
+      <mat-paginator [length]="filteredProducts.length"
+                     [pageSize]="pageSize"
+                     aria-label="Select page"
+                     (page)="pageEvent = $event; updatePaginator()">
+      </mat-paginator>
+    </div>
+  </div>
+</div>

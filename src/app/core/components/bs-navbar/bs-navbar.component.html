@@ -1,0 +1,112 @@
+<nav class="navbar navbar-expand-md navbar-dark bg-dark mb-3 sticky-top z-3 shadow-sm">
+    <div class="container">
+      <a class="navbar-brand" routerLink="/">
+        <img src="..\..\..\assets\origami-shop-logo.png" class="logo">
+      </a>
+      <button class="navbar-toggler" type="button" (click)="toggleNavbar()" [attr.aria-expanded]="!isNavbarCollapsed"
+      aria-controls="navbarCollapse" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapse" [ngClass]="{'show': !isNavbarCollapsed}">
+        <ul class="navbar-nav me-auto mb-2 mb-md-0">
+        </ul>
+        <ul class="navbar-nav mb-2 mb-md-0">
+
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+               Home
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="modal" data-bs-target="#aboutBox">
+               About
+            </a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/products" routerLinkActive="active">
+               Shopping
+            </a>
+          </li>
+
+          @if(appUser){
+            <li ngbDropdown class="nav-item dropdown z-3">
+              <a ngbDropdownToggle class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                {{appUser.name}}
+              </a>
+              <ul ngbDropdownMenu class="dropdown-menu">
+                <li><a class="dropdown-item" routerLink="/my/orders">My Orders</a></li>
+                @if (appUser.isAdmin) {
+                  <li><a class="dropdown-item" routerLink="/admin/orders">Manage Orders</a></li>
+                  <li><a class="dropdown-item" routerLink="/admin/products">Manage Products</a></li>
+                  <li><a class="dropdown-item" data-bs-toggle="modal" data-bs-target="#errorsBox">Errors Test</a></li>
+                }
+                <li><a class="dropdown-item" (click)="logout()">Log Out</a></li>
+              </ul>
+            </li>
+          }
+           @else {
+            <li class="nav-item">
+              <a class="nav-link" routerLink="/login" routerLinkActive="active">Login</a>
+            </li>
+          }
+
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/shopping-cart" routerLinkActive="active">
+              <i class="fa-solid fa-cart-shopping flex-wrap"></i>
+              <span class="badge text-bg-warning rounded-pill" *ngIf="cart$ | async as cart">
+                {{ cart.totalItemsCount }}
+              </span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  
+<!-- Modal -->
+<div class="modal fade" id="aboutBox" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">About</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body d-flex">
+        <div class="mousa col-3 ps-2 pe-2"><img src="..\..\..\assets\mousa.jpg" class="thumbnail" alt="Mousa"></div>
+        <div class="mousa-info col-9">Hi, I am Mousa Al-Kalouti, a software engineer and Full Stack .Net Developer, I create this sample website 
+                           using Angular 17, Bootstrap 5, and Firebase with a real-time database.</div>
+      </div>
+      <div class="modal-footer">
+        <a href="https://www.linkedin.com/in/mousa-alkalouti" target="_blank" class="btn btn-primary"><i class="bi bi-linkedin pe-1"></i> Visit my LinkedIn page</a>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<div class="modal fade" id="errorsBox" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="staticBackdropLabel">Errors Test</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h5>404 Page not found</h5>
+        <a class="btn btn-dinosaur col-12 mt-2" routerLink="/nonexistent" data-bs-dismiss="modal">Test</a>
+        <hr>
+        <h5>500 Internal Server Error</h5>
+        <button class="btn btn-dinosaur col-12 mt-2" (click)="causeServerError()" data-bs-dismiss="modal">Test</button>
+        <hr>
+        <h5>Runtime Error</h5>
+        <button class="btn btn-dinosaur col-12 mt-2" (click)="causeRuntimeError()">Test</button>
+      </div>
+      <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>

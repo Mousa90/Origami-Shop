@@ -1,0 +1,74 @@
+/* Default styles for all screen sizes */
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+}
+
+/* Large devices (desktops, 993px to 1200px) */
+@media only screen and (min-width: 993px) and (max-width: 1199px) {
+
+}
+
+/* Medium devices (tablets, 769px to 992px) */
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+
+}
+
+/* Small devices (tablets and small phones, 576px to 768px) */
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+    .row {
+        flex-direction: column-reverse;
+    }
+    .shipping-form {
+        width: 100% !important;
+        margin-top: 20px;
+    }
+    .cart-summary {
+        width: 100% !important;
+    }
+}
+
+/* Extra small devices (small phones, 480px to 576px) */
+@media only screen and (min-width: 481px) and (max-width: 576px) {
+    .row {
+        flex-direction: column-reverse;
+    }
+    .shipping-form {
+        width: 100% !important;
+        margin-top: 20px;
+        padding: 0 20px 0 20px;
+    }
+    .cart-summary {
+        width: 100% !important;
+    }
+}
+
+/* Very small devices (phones, 401px to 480px) */
+@media only screen and (min-width: 401px) and (max-width: 480px) {
+    .row {
+        flex-direction: column-reverse;
+    }
+    .shipping-form {
+        width: 100% !important;
+        margin-top: 20px;
+        padding: 0 10px 0 10px;
+    }
+    .cart-summary {
+        width: 100% !important;
+    }
+}
+
+/* Extremely small devices (phones, 400px and below) */
+@media only screen and (max-width: 400px) {
+    .row {
+        flex-direction: column-reverse;
+    }
+    .shipping-form {
+        width: 100% !important;
+        margin-top: 20px;
+    }
+    .cart-summary {
+        width: 100% !important;
+    }
+}

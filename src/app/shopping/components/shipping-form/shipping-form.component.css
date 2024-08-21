@@ -1,0 +1,53 @@
+/* Default styles for all screen sizes */
+.btn {
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: scale(1.05); /* Slightly enlarge the button */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow for a pop-up effect */
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+}
+
+/* Large devices (desktops, 993px to 1200px) */
+@media only screen and (min-width: 993px) and (max-width: 1199px) {
+
+}
+
+/* Medium devices (tablets, 769px to 992px) */
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+
+}
+
+/* Small devices (tablets and small phones, 577px to 768px) */
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+
+}
+
+/* Extra small devices (small phones, 481px to 576px) */
+@media only screen and (min-width: 481px) and (max-width: 576px) {
+
+}
+
+/* Very small devices (phones, 480px and below) */
+@media only screen and (max-width: 480px) {
+    .buttons-container {
+        flex-direction: column-reverse;
+    }
+    .btn-place {
+        width: 100%;
+    }
+    .btn-back {
+        width: 100%;
+        margin-top: 10px !important;
+    }
+}
+
+/* Extremely small devices (phones, 400px and below) */
+@media only screen and (max-width: 400px) {
+
+}

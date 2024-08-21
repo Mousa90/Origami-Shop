@@ -1,0 +1,91 @@
+/* Default styles for all screen sizes */
+.btn {
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.order-info, .order-summary {
+  order: 0;
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .card {
+    width: 900px !important;
+  }
+}
+
+/* Large devices (desktops, 993px to 1200px) */
+@media only screen and (min-width: 993px) and (max-width: 1199px) {
+  .card {
+    width: 900px !important;
+  }
+}
+
+/* Medium devices (tablets, 769px to 992px) */
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  .order-summary {
+    width: 53%;
+  }
+  .order-info {
+    width: 47%;
+  }
+  .btn {
+    font-size: 14px;
+  }
+}
+
+/* Small devices (tablets and small phones, 768px  and below) */
+@media only screen and (max-width: 768px) {
+  .card .row{
+    flex-direction: column;
+  }
+  .order-summary {
+    width: 100%;
+    order: -1;
+    
+  }
+  .order-info {
+    width: 100%;
+    margin-top: -15px;
+
+  }
+
+}
+
+/* Extra small devices (small phones, 480px to 576px) */
+@media only screen and (min-width: 481px) and (max-width: 576px) {
+
+}
+
+/* Very small devices (phones, 480px and below) */
+ @media only screen and (max-width: 480px) {
+  .order-buttons {
+    flex-direction: column-reverse;
+  }
+  .order-buttons .btn {
+    margin: 5px 0 5px 0 !important;
+    width: 100%;
+  }
+  .card {
+    min-width: 270px;
+  }
+}
+
+/* Extremely small devices (phones, 400px and below) */
+@media only screen and (max-width: 400px) {
+  .order-buttons {
+    flex-direction: column-reverse;
+  }
+  .order-buttons .btn {
+    margin: 5px 0 5px 0 !important;
+    width: 100%;
+  }
+  .card {
+    min-width: 250px;
+  }
+}

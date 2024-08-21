@@ -1,0 +1,93 @@
+/* Default styles for all screen sizes */
+.mat-elevation-z8 {
+  box-shadow: none;
+}
+
+.btn {
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.search a {
+  width: 220px !important;
+}
+
+.search a, .search input {
+    order: 0;
+  }
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .mat-elevation-z8 {
+      width: 1100px;
+  }
+  .search {
+      width: 1100px;
+  }
+}
+
+/* Large devices (desktops, 993px to 1200px) */
+@media only screen and (min-width: 993px) and (max-width: 1199px) {
+  /* Add your styles here */
+}
+
+/* Medium devices (tablets, 769px to 992px) */
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+
+}
+
+/* Small devices (tablets and small phones, 576px to 768px) */
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+    .hide-on-small {
+    display: none;
+}
+  ::ng-deep .mdc-notched-outline {
+      height: 90% !important;
+      width: 90% !important;
+  }
+}
+
+/* Extra small devices (small phones, 480px to 576px) */
+@media only screen and (min-width: 481px) and (max-width: 576px) {
+  .hide-on-small {
+    display: none;
+}
+  ::ng-deep .mdc-notched-outline {
+      height: 90% !important;
+      width: 90% !important;
+  }
+
+}
+
+/* Very small devices (phones, 500px and below) */
+@media only screen and (max-width: 500px) {
+  .hide-on-small {
+      display: none;
+  }
+  .hide-on-smaller {
+      display: none;
+  }
+  ::ng-deep .mdc-notched-outline {
+      height: 90% !important;
+      width: 90% !important;
+  }
+}
+
+/* Extremely small devices (phones, 430x and below) */
+@media only screen and (max-width: 430px) {
+  ::ng-deep .mat-mdc-paginator-range-label {
+      margin: 0 !important;
+  }
+  .search {
+      flex-direction: column; /* Stack items vertically */
+  }
+  .search a {
+      width: 100% !important;
+      order: -1;
+      margin: 0 0 7.5px 0 !important;
+  }
+}

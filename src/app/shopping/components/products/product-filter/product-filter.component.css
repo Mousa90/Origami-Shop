@@ -1,0 +1,8 @@
+
+.sticky-top {
+    top: 80px;
+}
+
+* {
+    transition: all 0.3s ease;
+}

@@ -1,0 +1,67 @@
+
+<form #f="ngForm">
+    <div class="form-group">
+      <label for="">Name</label>
+      <input #name="ngModel" name="name" [(ngModel)]="shipping.name" type="text" 
+      class="form-control shadow-sm " required [ngClass]="{'border-danger': name.touched && name.invalid}">
+      <label class="text-danger" *ngIf="name.touched && name.invalid">
+        <div *ngIf="name.errors">Name is required.</div>
+      </label>
+    </div>
+
+    <div class="form-group">
+      <label for="">Address</label>
+      <input #addressLine1="ngModel" name="addressLine1" [(ngModel)]="shipping.addressLine1" type="text" 
+      class="form-control shadow-sm" [ngClass]="{'border-danger': addressLine1.touched && addressLine1.invalid}"
+        placeholder="Line 1" required>
+      <label class="text-danger" *ngIf="addressLine1.touched && addressLine1.invalid">
+        <div *ngIf="addressLine1.errors">Address Line 1 is required.</div>
+      </label>
+    </div>
+
+    <div class="form-group">
+      <label for=""></label>
+      <input #addressLine2="ngModel" name="addressLine2" [(ngModel)]="shipping.addressLine2" type="text" 
+      class="form-control shadow-sm" [ngClass]="{'border-danger': addressLine2.touched && addressLine2.invalid}"
+        placeholder="Line 2" required>
+      <label class="text-danger" *ngIf="addressLine2.touched && addressLine2.invalid">
+        <div *ngIf="addressLine2.errors">Address Line 2 is required.</div>
+      </label>
+    </div>
+
+    <div class="form-group">
+      <label for="">City</label>
+      <input #city="ngModel" name="city" [(ngModel)]="shipping.city" type="text" 
+      class="form-control shadow-sm" [ngClass]="{'border-danger': city.touched && city.invalid}" required>
+      <label class="text-danger" *ngIf="city.touched && city.invalid">
+        <div *ngIf="city.errors">City is required.</div>
+      </label>
+    </div>
+
+    <div class="buttons-container d-flex justify-content-end">
+      <button type="button" (click)="goBack()" class="btn btn-dinosaur btn-back shadow-sm mt-4 me-2">Back to Cart</button>
+      <button [disabled]="!f.valid || shipping.totalItemsCount == 0" data-bs-toggle="modal" data-bs-target="#placeOrderDialog"
+      class="btn btn-primary btn-place mt-4">Place Order</button>
+    </div>
+
+  </form>
+
+  <!-- Modal -->
+<div class="modal fade" id="placeOrderDialog" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+  <div class="modal-content">
+    <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Place Order</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+    </div>
+    <div class="modal-body">
+        Are you sure you want to place this order?
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-info shadow-sm" data-bs-dismiss="modal">Cancel</button>
+        <button type="button" class="btn btn-primary shadow-sm" data-bs-dismiss="modal" (click)="placeOrder()">Proceed</button>
+    </div>
+  </div>
+  </div>
+  </div>
+

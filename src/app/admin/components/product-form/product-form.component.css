@@ -1,0 +1,74 @@
+/* Default styles for all screen sizes */
+.btn {
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: scale(1.05); /* Slightly enlarge the button */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow for a pop-up effect */
+}
+
+.product-form,
+.preview-card {
+    order: 0;
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+    /* Add your styles here */
+}
+
+/* Large devices (desktops, 992px to 1200px) */
+@media only screen and (min-width: 993px) and (max-width: 1199px) {
+    /* Add your styles here */
+}
+
+/* Medium devices (tablets, 768px to 992px) */
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+    /* Add your styles here */
+}
+
+/* Small devices (tablets and small phones, 576px to 768px) */
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+    .preview-card {
+        margin-top: 20px !important;
+        order: -1; /* Makes .preview-card appear first */
+    }
+    .product-form {
+        padding: 20px;
+    }
+}
+
+/* Extra small devices (small phones, 480px to 576px) */
+@media only screen and (min-width: 481px) and (max-width: 576px) {
+    .preview-card {
+        margin-top: 20px !important;
+        order: -1; /* Makes .preview-card appear first */
+    }
+    .product-form {
+        padding: 10px;
+    }
+}
+
+/* Very small devices (phones, 480px and down) */
+@media only screen and (max-width: 480px) {
+    .preview-card {
+        margin-top: 20px !important;
+        order: -1; /* Makes .preview-card appear first */
+    }
+    .product-form {
+        padding: 10px;
+    }
+    .buttons {
+        flex-direction: column-reverse;
+    }
+    .buttons .btn {
+        width: 100%;
+        margin: 5px 0 5px 0 !important;
+    }
+}
+
+/* Extremely small devices (phones, 400px and down) */
+@media only screen and (max-width: 400px) {
+
+}

@@ -1,0 +1,9 @@
+{
+  "projects": {
+    "default": "oshop-eca75",
+    "production": "oshop-eca75"
+  },
+  "targets": {},
+  "etags": {},
+  "dataconnectEmulatorConfig": {}
+}

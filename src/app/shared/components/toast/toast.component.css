@@ -1,0 +1,15 @@
+/* Default styles for all screen sizes */
+.bg-success {
+  color: white;
+  font-weight: 500;
+  border: 1px solid #319154;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+}
+
+/* Very small devices (phones, 480px and below) */
+@media only screen and (max-width: 480px) {
+  .bg-success {
+    width: 100%;
+    font-size: 13px;
+  }
+}

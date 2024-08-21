@@ -1,0 +1,10 @@
+
+@if (toastService.showToast && toastService.toastStatus == "success") {
+    <ngb-toast
+     [autohide]="true"
+     (hidden)="toastService.showToast = false"
+     [delay]="5000"
+     [class.bg-success] = "true">
+     {{  toastService.toastText }}
+    </ngb-toast>
+  }

@@ -1,0 +1,101 @@
+/* Default styles for all screen sizes */
+.top-margin {
+    margin-top: 300px;
+}
+
+.center-container {
+    display: flex !important;
+    justify-content: center !important;
+    width: 100% !important;
+}
+
+.row {
+    display: flex !important;
+    flex-wrap: wrap !important; /* Ensures columns wrap correctly */
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+}
+
+/* Large devices (desktops, 992px to 1200px) */
+@media only screen and (min-width: 993px) and (max-width: 1199px) {
+    .card-size {
+        width: calc(6 * (100% / 12)); /* col-6 */
+    }
+}
+
+/* Medium devices (tablets, 768px to 992px) */
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+    .card-size {
+        width: calc(6 * (100% / 12)); /* col-6 */
+    }
+}
+
+/* Small devices (tablets and small phones, 577px to 768px) */
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+    .card-size {
+        width: 100%; /* col-12 */
+    }
+    .filter-size {
+        width: calc(5 * (100% / 12)); /* col-5 */
+    }
+    .cards-size {
+        width: calc(7 * (100% / 12)); /* col-7 */
+    }
+}
+
+/* Extra small devices (small phones, 481px to 576px) */
+@media only screen and (min-width: 481px) and (max-width: 576px) {
+    .card-size {
+        width: 100%; /* col-12 */
+        margin: 0 0 2.5% 0;
+    }
+    .filter-size {
+        width: calc(11 * (100% / 12)); /* col-11 */
+        margin: 0 5% 5% 5%;
+    }
+    .cards-size {
+        width: calc(11 * (100% / 12)); /* col-11 */
+    }
+    .shopping-page {
+        flex-direction: column;
+    }
+}
+
+  /* Very small devices (phones, 480px and below) */
+  @media only screen and (max-width: 480px) {
+    .card-size {
+        width: 100%; /* col-12 */
+        margin: 0 0 2.5% 0;
+    }
+    .filter-size {
+        width: calc(11 * (100% / 12)); /* col-11 */
+        margin: 0 5% 5% 5%;
+    }
+    .cards-size {
+        width: calc(11 * (100% / 12)); /* col-11 */
+    }
+    .shopping-page {
+        flex-direction: column;
+    }
+}
+
+/* Extremely small devices (phones, 400px and down) */
+@media only screen and (max-width: 400px) {
+    .card-size {
+        width: 100%; /* col-12 */
+        margin: 0 0 2.5% 0;
+    }
+    .filter-size {
+        width: calc(11 * (100% / 12)); /* col-11 */
+        margin: 0 5% 5% 5%;
+    }
+    .cards-size {
+        width: calc(11 * (100% / 12)); /* col-11 */
+    }
+    .shopping-page {
+        flex-direction: column;
+    }
+}

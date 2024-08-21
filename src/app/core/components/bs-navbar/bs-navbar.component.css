@@ -1,0 +1,141 @@
+/* Default styles for all screen sizes */
+.nav-link {
+    cursor: pointer;
+}
+
+.nav-link:active, .nav-link:focus {
+    color: white;
+}
+
+/* Active link styles */
+nav ul li a.active {
+    color: white;
+}
+
+.logo {
+    max-width: 100%;
+    transition: box-shadow 0.3s ease;
+}
+
+.logo:hover {
+    filter: drop-shadow(0 0 0.50rem var(--warning));
+}
+
+.navbar-brand {
+    width: 190px;
+}
+
+.nav-item {
+    font-size: 16.5px;
+}
+
+.dropdown-item {
+    font-size: 15px;
+}
+
+.fa-cart-shopping {
+    font-size: 17.5px;
+}
+
+.badge {
+    font-size: 10px;
+}
+
+.thumbnail {
+    height: 90px;
+    width: 90px;
+    border-radius: 100%;
+    object-fit: cover;
+    border: 1px solid var(--secondary);
+}
+
+.dropdown-item, a {
+    cursor: pointer;
+}
+
+.modal-body h5 {
+    font-size: 18px;
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+}
+
+/* Large devices (desktops, 993px to 1200px) */
+@media only screen and (min-width: 993px) and (max-width: 1199px) {
+
+}
+
+/* Medium devices (tablets, 769px to 992px) */
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+
+}
+
+/* Small devices (tablets and small phones, 576px to 768px) */
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+    .nav-item {
+        text-align: center;
+    }
+}
+
+/* Extra small devices (small phones, 480px to 576px) */
+@media only screen and (min-width: 481px) and (max-width: 576px) {
+    .navbar-brand {
+        width: 180px;
+    }
+    .nav-item {
+        text-align: center;
+    }
+    .nav-item {
+        font-size: 15px;
+    }
+    .dropdown-item {
+        font-size: 14px;
+    }
+    .fa-cart-shopping {
+        font-size: 16px;
+    }
+    .badge {
+        font-size: 9px;
+    }
+    .modal-body h5 {
+        font-size: 17px;
+    }
+}
+
+/* Very small devices (phones, 480px and below) */
+@media only screen and (max-width: 480px) {
+    .navbar-brand {
+        width: 180px;
+    }
+    .nav-item {
+        text-align: center;
+    }
+    .nav-item {
+        font-size: 15px;
+    }
+    .dropdown-item {
+        font-size: 14px;
+    }
+    .fa-cart-shopping {
+        font-size: 16px;
+    }
+    .badge {
+        font-size: 9px;
+    }
+    .mousa {
+        display: none;
+    }
+    .mousa-info {
+        width: 100%;
+    }
+    .modal-body h5 {
+        font-size: 17px;
+    }
+}
+
+/* Extremely small devices (phones, 400px and below) */
+@media only screen and (max-width: 400px) {
+
+}

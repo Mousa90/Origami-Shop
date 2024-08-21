@@ -1,0 +1,47 @@
+
+/* Default styles for all screen sizes */
+
+
+/* Extra small devices (small phones, 481px to 576px) */
+@media only screen and (min-width: 481px) and (max-width: 576px) {
+    .buttons-container {
+        flex-direction: column-reverse;
+        margin-left: -3% !important;
+    }
+    .btn-orders {
+        width: 100%;
+    }
+    .btn-home {
+        width: 100%;
+        margin-top: 5px !important;
+    }
+}
+
+/* Very small devices (phones, 480px and below) */
+@media only screen and (max-width: 480px) {
+    .buttons-container {
+        flex-direction: column-reverse;
+        margin-left: -3% !important;
+    }
+    .btn-orders {
+        width: 100%;
+    }
+    .btn-home {
+        width: 100%;
+        margin-top: 5px !important;
+    }
+    .card {
+        min-width: 270px;
+      }
+}
+
+
+  /* Very small devices (phones, 400px and below) */
+  @media only screen and (max-width: 400px) {
+    .buttons-container {
+        margin-left: -4% !important;
+    }
+    .card {
+      min-width: 250px;
+    }
+  }

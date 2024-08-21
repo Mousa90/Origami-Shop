@@ -1,0 +1,19 @@
+
+button:hover {
+    transform: scale(1.05); /* Slightly enlarge the button */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a shadow for a pop-up effect */
+  }
+
+  button {
+    height: 38px;
+    width: 38px;
+    transition: all 0.3s ease;
+  }
+
+  .d-grid {
+    padding: 1px;
+  }
+
+  .no-gutters {
+    padding: 0 2px;
+  }

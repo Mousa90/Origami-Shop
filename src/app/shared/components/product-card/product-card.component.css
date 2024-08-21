@@ -1,0 +1,150 @@
+/* Default styles for all screen sizes */
+.card {
+  margin-bottom: 30px;
+  max-width: 30vw;
+  transition: outline-color 0.0s ease-out, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  outline: 1px solid var(--warning); /* Default border color */
+  box-shadow: 0 0 15px var(--warning) !important; /* Glowing effect with the specified color */
+}
+
+.card-body {
+  height: 15vh;
+  display: flex;
+  flex-direction: column;
+}
+
+button {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+button:hover {
+  transform: scale(1.05); /* Slightly enlarge the button */
+  box-shadow: 0 4px 8px rgba(1, 1, 1, 0.2); /* Add a shadow for a pop-up effect */
+}
+
+.bottom-content {
+  margin-top: auto;
+}
+
+.card-footer {
+  padding: 0;
+}
+
+.square-container {
+  width: 100%;
+  height: 0;
+  padding-bottom: 80%; /* This maintains the 16:9 aspect ratio */
+  position: relative;
+  display: flex;
+}
+
+.square-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the square area */
+}
+
+.spinner-border {
+  margin-top: calc(100% / 3);
+}
+
+button {
+  height: 40px;
+}
+
+/* Extra large devices (large desktops, 1400px and up) */
+@media only screen and (min-width: 1400px) {
+
+}
+
+/* Large devices (desktops, 1200px to 1399px) */
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .card {
+      max-width: 30vw; /* Adjust width for medium screens */
+  }
+  .card-body {
+      height: 15vh; /* Adjust height for medium screens */
+  }
+  h5.card-title {
+    font-size: 17px !important;
+  }
+}
+
+/* Large devices (desktops, 992px to 1199px) */
+@media only screen and (min-width: 993px) and (max-width: 1199px) {
+  .card {
+      max-width: 35vw; /* Adjust width for medium screens */
+  }
+  .card-body {
+      height: 15vh; /* Adjust height for medium screens */
+  }
+
+}
+
+/* Medium devices (tablets, 768px to 992px) */
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+  .card {
+      max-width: 33vw; /* Adjust width for tablets */
+  }
+
+  .card-body {
+      height: 17vh; /* Adjust height for tablets */
+  }
+  
+  h5.card-title {
+    font-size: 17px !important;
+  }
+}
+
+/* Small devices (tablets and small phones, 600px to 768px) */
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+  .card {
+      max-width: 50vw; /* Adjust width for smaller devices */
+  }
+
+  .card-body {
+      height: 15vh; /* Adjust height for smaller devices */
+  }
+    
+  h5.card-title {
+    font-size: 17px !important;
+  }
+}
+
+/* Extra small devices (small phones, 480px to 600px) */
+@media only screen and (min-width: 481px) and (max-width: 576px) {
+  .card {
+      max-width: 84vw; /* Adjust width for extra small devices */
+  }
+
+  .card-body {
+      height: 12vh; /* Adjust height for extra small devices */
+  }
+}
+
+/* Very small devices (phones, 480px and down) */
+@media only screen and (max-width: 480px) {
+  .card {
+      max-width: 79vw; /* Adjust width for very small devices */
+  }
+
+  .card-body {
+      height: 14vh; /* Adjust height for very small devices */
+  }
+}
+@media only screen and (min-width: 390px) and (max-width: 480px) {
+  .card {
+      max-width: 83vw; /* Adjust width for extra small devices */
+  }
+}
+@media only screen and (min-width: 365px) and (max-width: 399px) {
+  .card {
+      max-width: 81vw; /* Adjust width for extra small devices */
+  }
+}

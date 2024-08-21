@@ -1,0 +1,217 @@
+/* Default styles for all screen sizes */
+.icon-size {
+    font-size: 22px;
+}
+
+.bg-dark {
+    color: white;
+    width: 100%;
+}
+
+footer {
+    height: 73px;
+    margin-top: 15px;
+}
+
+.footer-logo {
+    max-width: 47px;
+}
+
+.icons-container {
+    margin: 0;
+}
+
+.bg-div {
+    background-image: url('assets/bg-fuji.jpg');
+    background-size: 110%;
+    background-position-y: -14%;
+    background-position-x: 48%;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: calc(100vh - 125px);
+    z-index: 0;
+    transition: all 0.0s ease;
+}
+
+.min-h-100vh {
+    min-height: 90vh !important;
+}
+
+.bi {
+    cursor: pointer;
+}
+
+.bi:hover {
+    color: var(--warning);
+}
+
+.fixed-top-left {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 1050; /* Make sure the toast is on top of other elements */
+    margin: 1rem;
+}
+
+/* Styles for the loading screen */
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8 ); /* Semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure it's above other content */
+    font-size: 1.5rem;
+    flex-direction: column;
+  }
+
+/* Extra large devices (1280px and up) */
+@media only screen and (min-width: 1280.01px) {
+    .bg-div {
+        background-size: 110%;
+        background-position-y: -14%;
+    }
+}
+
+/* Large devices (1200px to 1279px) */
+@media only screen and (min-width: 1200.01px) and (max-width: 1279.99px) {
+    .bg-div {
+        background-size: 115%;
+        background-position-y: -20%;
+    }
+}
+
+/* New intermediate breakpoint (between large and medium devices, 1024px to 1199px) */
+@media only screen and (min-width: 1100.01px) and (max-width: 1199.99px) {
+    .bg-div {
+        background-size: 120%;
+        background-position-y: -30%;
+    }
+}
+
+/* Large devices (desktops, 993px to 1023px) */
+@media only screen and (min-width: 993.01px) and (max-width: 1099.99px) {
+    .bg-div {
+        background-size: 125%;
+        background-position-y: -60%;
+    }
+}
+
+/* Between 891px and 992px */
+@media only screen and (min-width: 891.01px) and (max-width: 992.99px) {
+    .bg-div {
+        background-image: url('assets/bg-fuji-1000x700.jpg');
+        background-size: 117%;
+        background-position-y: -75%;
+    }
+}
+
+/* Medium devices (tablets, 769px to 890px) */
+@media only screen and (min-width: 769.01px) and (max-width: 890.99px) {
+    .bg-div {
+        background-image: url('assets/bg-fuji-1000x700.jpg');
+        background-size: 140%;
+        background-position-y: -40%;
+    }
+}
+
+/* Between 680px and 768px */
+@media only screen and (min-width: 680.01px) and (max-width: 768.99px) {
+    .bg-div {
+        background-image: url('assets/bg-fuji-1000x700.jpg');
+        background-size: 160%;
+        background-position-y: -60%;
+    }
+}
+
+/* Small devices (tablets and small phones, 577px to 679px) */
+@media only screen and (min-width: 577.01px) and (max-width: 679.99px) {
+    .bg-div {
+        background-image: url('assets/bg-fuji-1000x700.jpg');
+        background-size: 193%;
+        background-position-y: -42%;
+    }
+}
+
+
+/* Extra small devices (small phones, 480px to 576px) */
+@media only screen and (min-width: 481.01px) and (max-width: 576.99px) {
+    .bg-div {
+        background-image: url('assets/bg-fuji-580x700.jpg');
+        background-size: 135%;
+        background-position-y: -33%;
+    }
+    .icons {
+        font-size: 22px !important;
+    }
+    .copy-right {
+        font-size: 14px;
+    }
+    .spinner-grow {
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+      div.loading-screen {
+        font-size: 1.15rem !important;
+      }
+}
+
+/* Very small devices (phones, 480px and below) */
+@media only screen and (max-width: 480.99px) {
+    .bg-div {
+        background-image: url('assets/bg-fuji-580x700.jpg');
+        background-size: 160%;
+        background-position-y: -38%;
+    }
+    .icons {
+        font-size: 22px !important;
+    }
+    .copy-right {
+        font-size: 14px;
+    }
+    .fixed-top-left {
+        position: fixed;
+        bottom: 0;
+        right: 0;
+        left: 0;
+    }
+    .spinner-grow {
+        width: 1.5rem;
+        height: 1.5rem;
+      }
+      div.loading-screen {
+        font-size: 1.15rem !important;
+      }
+}
+
+/* Extremely small devices (phones, 410px and below) */
+@media only screen and (max-width: 410.99px) {
+    .bg-div {
+        background-image: url('assets/bg-fuji-580x700.jpg');
+        background-size: 160%;
+        background-position-y: -90%;
+    }
+    .container {
+        flex-direction: column-reverse;
+        padding: 0 30px 0 30px !important;
+    }
+    footer {
+        height: 94px !important;
+    }
+    .footer-logo {
+        margin: 0 5px 0 0;
+    }
+    .logo-copyright-container a {
+        margin: 0 !important;
+    }
+    .logo-copyright-container {
+        margin-bottom: 10px;
+    }
+    .icons {
+        margin-top: 10px;
+    }
+}

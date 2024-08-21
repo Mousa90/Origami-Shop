@@ -1,0 +1,90 @@
+
+<div class="card child-center col-12 shadow-sm">
+    <h4 class="card-header">Order Details</h4>
+  <div class="row">
+    <div class="col-5 order-info">
+        <div class="card-body">
+          <h5 class="card-title mb-3">Order Main Info:</h5>
+          <div class="card-text mb-2"><span class="fw-bold ms-3">Order No: </span> #{{ order.datePlaced }}</div>
+          <div class="card-text mb-2"><span class="fw-bold ms-3">Order Date: </span> {{ order.datePlaced | date  }}</div>
+          <div class="card-text">
+            <span class="fw-bold ms-3">Order State: </span>
+          @if(state == "Pending"){ <span class="text-primary fw-semi-bold"> {{ order.state }} </span> }
+          @else if (state == "Closed") { <span class="text-dark-success fw-semi-bold"> {{ order.state }} </span> }
+          @else if (state == "Canceled") { <span class="text-danger fw-semi-bold"> {{ order.state }} </span> }
+          </div>
+          <h5 class="card-title mt-4 mb-3">Order Shipping Info:</h5>
+          <div class="card-text mb-2"><span class="fw-bold ms-3">Recipient: </span> {{ order.shipping.name }}</div>
+          <div class="card-text mb-2"><span class="fw-bold ms-3">City: </span> {{ order.shipping.city }}</div>
+          <div class="card-text mb-3"><span class="fw-bold ms-3">Address: </span>
+             {{ order.shipping.addressLine1 }} - {{ order.shipping.addressLine2 }}</div>
+             <div class="order-buttons d-flex mt-1">
+              <button (click)="goBack()" class="btn btn-dinosaur shadow-sm">Back</button>
+              <button data-bs-toggle="modal" data-bs-target="#cancelDialog"
+                      class="btn btn-danger shadow-sm ms-2 me-2" [disabled]="state != 'Pending'">Cancel Order</button>
+              @if(user.isAdmin){<button data-bs-toggle="modal" data-bs-target="#closeDialog" 
+                      class="btn btn-dark-success text-white shadow-sm" [disabled]="state != 'Pending'">Close Order</button>}
+             </div>
+        </div>
+    </div>
+    <div class="col-7 border-right order-summary">
+        <div class="d-flex">
+            <div class="card-body">
+              <h5 class="card-title">Order Summary:</h5>
+              <ul class="list-group list-group-flush">
+                <li *ngFor="let item of order.items" class="list-group-item">
+                    {{ item.quantity }} x {{ item.product.title }}
+                    <div class="float-end">
+                        {{ item.totalPrice | currency:'USD':'symbol' }}
+                    </div>
+                </li>
+                <li class="list-group-item fw-bold">
+                    Total
+                    <div class="float-end">
+                        {{ order.cartTotalPrice | currency:'USD':'symbol' }}
+                    </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+  </div>
+</div>
+</div>
+
+<!-- Cancel Dialog Box -->
+<div class="modal fade" id="cancelDialog" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Cancel Order</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Are you sure you want to cancel this order?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-info shadow-sm" data-bs-dismiss="modal">Not yet</button>
+        <button type="button" class="btn btn-danger shadow-sm" data-bs-dismiss="modal" (click)="cancelOrder()">Proceed</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Close Dialog Box -->
+<div class="modal fade" id="closeDialog" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Close Order</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        Are you sure you want to close this order?
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-info shadow-sm" data-bs-dismiss="modal">Not yet</button>
+        <button type="button" class="btn btn-dark-success text-white shadow-sm" data-bs-dismiss="modal" (click)="closeOrder()">Proceed</button>
+      </div>
+    </div>
+  </div>
+</div>

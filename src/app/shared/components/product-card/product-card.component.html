@@ -1,0 +1,29 @@
+
+<div class="card child-center shadow-sm p-2 mb-3 rounded">
+    <div class="square-container d-flex justify-content-center ">
+      <img *ngIf="product.imageUrl" (load)="onImageLoad()" [src]="product.imageUrl" class="card-img-top img-fluid border z-2" alt="{{ product.title }}">
+      <img *ngIf="imageLoaded && !product.imageUrl || AddPage && !product.imageUrl" src="..\..\..\assets\preview.png" class="card-img-top img-fluid border z-1" alt="Preview">
+      
+      <div *ngIf="!imageLoaded" class="spinner-border text-success z-0" role="status">
+        <span class="visually-hidden">Loading...</span>
+      </div>
+    </div>
+    <div class="card-body">
+      <div class="bottom-content">
+      <h5 *ngIf="!product.title" class="card-title text-info">Title</h5>
+      <h5 *ngIf="product.title" class="card-title">{{ product.title }}</h5>
+      <p *ngIf="!product.price" class="card-text text-info">0$</p>
+      <p *ngIf="product.price" class="card-text">{{ product.price | currency:'USD':'symbol' }}</p>
+    </div>
+    </div>
+    <card-footer *ngIf="showActions">
+        <div class="d-grid">
+          @if (shoppingCart.getQuantity(product) === 0) {
+            <button (click)="addToCart()"
+            class="btn btn-secondary btn-block shadow-sm">Add to Cart</button>
+          } @else {
+            <product-quantity [product]="product" [shopping-cart]="shoppingCart"></product-quantity>
+          }
+        </div>
+    </card-footer>
+  </div>

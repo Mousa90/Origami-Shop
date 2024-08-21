@@ -1,0 +1,289 @@
+/* Default styles for all screen sizes */
+.icon-size {
+    font-size: 22px;
+  }
+
+  .main-div {
+    width: 100%;
+    min-height: calc(100vh - 125px) ; /* 125 = 55 NavBar + 70 Footer */
+}
+
+main {
+    width: 750px;
+    margin: 33px auto 0 auto;
+}
+
+.square-container {
+    width: 100%;
+    padding-top: 1.3%; /* 16:9 aspect ratio (9/16 = 0.5625 or 56.25%) */
+    position: relative;
+    display: flex;
+    gap: 10px; /* Adjust the value to control the space between the images */
+ 
+  }
+  
+  .square-container img {
+    width: calc(33.33% - 10px);
+    flex: 1; /* Allows images to grow and shrink equally */
+    min-height: 100%;
+    object-fit: cover; /* Ensures the image covers the square area */
+  }
+
+  .border-wood{
+    border-color: #6f5a57;
+  }
+
+  .border-wood:hover {
+    background-color: var(--warning);
+  }
+
+
+  /* Extra large devices (large desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .square-container img {
+        padding: 0.75rem !important;
+    }
+}
+
+/* Large devices (desktops, 993px to 1200px) */
+@media only screen and (min-width: 993px) and (max-width: 1199px) {
+    .square-container img {
+        padding: 0.75rem !important;
+    }
+}
+
+/* Medium devices (tablets, 769px to 992px) */
+@media only screen and (min-width: 769px) and (max-width: 992px) {
+    main {
+        width: 700px;
+        margin: 38px auto 0 auto;
+    }
+    .square-container {
+        margin-top: 40px;
+    }
+    .square-container img {
+        padding: 0.7rem !important;
+    }
+}
+
+/* Small devices (tablets and small phones, 576px to 768px) */
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+    main {
+        width: 540px;
+    }
+    .square-container {
+        padding-top: 3px !important;
+    }
+    .btn-shop {
+        margin-bottom: 0px;
+    }
+    .img-wave {
+        display: none;
+    }
+    .square-container img {
+        padding: 0.7rem !important;
+    }
+}
+
+/* Extra small devices (small phones, 480px to 576px) */
+@media only screen and (min-width: 481px) and (max-width: 576px) {
+    main {
+        width: 425px;
+        margin: 38px auto 0 auto;
+    }
+    .lead.description {
+        font-size: 18px;
+    }
+    .btn-shop {
+        font-size: 18px !important;
+        margin-bottom: 30px;
+    }
+    .img-wave {
+        display: none;
+    }
+    .square-container img {
+        padding: 0.6rem !important;
+    }
+}
+
+/* Very small devices (phones, 480px and below) */
+@media only screen and (max-width: 480px) {
+    main {
+        width: 350px;
+        margin: 30px auto 0 auto;
+    }
+    .lead.description {
+        font-size: 18px;
+    }
+    .btn-shop {
+        font-size: 17px !important;
+    }
+    .img-wave {
+        display: none;
+    }
+    .img-cherry {
+        display: none;
+    }
+    .square-container img {
+        padding: 0.7rem !important;
+    }
+}
+
+/* Extremely small devices (phones, 410px and below) */
+@media only screen and (max-width: 410px) {
+    main {
+        width: 270px;
+        margin: 30px auto 0 auto;
+    }
+    .lead.description {
+        font-size: 17px;
+        font-weight:350;
+    }
+    .btn-shop {
+        font-size: 16px !important;
+    }
+    .square-container img {
+        padding: 0.6rem !important;
+    }
+}
+
+/* Sakura petals style */
+.petal {
+    position: fixed;
+    width: 100%;
+    top: -340px;
+    text-align: left;
+}
+
+.petal span {
+    display: inline-block;
+    overflow: hidden;
+    width: 5px;
+    height: 5px;
+    border-radius: 200px 10px 200px 200px;
+    background: linear-gradient(to bottom, var(--sakura), #ddd6f3);
+    z-index: 1;
+    transform: skewX(30deg);
+    backface-visibility: visible;
+    -webkit-animation: fallingSakura1 8s ease infinite;
+}
+
+.petal span:nth-of-type(3n+2) {
+    -webkit-animation: fallingSakura2 8s ease infinite;
+}
+
+.petal span:nth-of-type(3n+1) {
+    -webkit-animation: fallingSakura3 8s ease infinite;
+}
+
+
+.petal span:nth-of-type(n)   { -webkit-animation-delay: -1.9s;}
+.petal span:nth-of-type(2n)  { -webkit-animation-delay: 3.9s;}
+.petal span:nth-of-type(3n)  { -webkit-animation-delay: 2.3s;}
+.petal span:nth-of-type(4n)  { -webkit-animation-delay: 4.4s;}
+.petal span:nth-of-type(5n)  { -webkit-animation-delay: 5s;  }
+.petal span:nth-of-type(6n)  { -webkit-animation-delay: 3.5s;}
+.petal span:nth-of-type(7n)  { -webkit-animation-delay: 2.8s;}
+.petal span:nth-of-type(8n)  { -webkit-animation-delay: 1.5s;}
+.petal span:nth-of-type(9n)  { -webkit-animation-delay: 3.3s;}
+.petal span:nth-of-type(10n) { -webkit-animation-delay: 2.5s;}
+.petal span:nth-of-type(11n) { -webkit-animation-delay: 1.2s;}
+.petal span:nth-of-type(12n) { -webkit-animation-delay: 4.1s;}
+.petal span:nth-of-type(13n) { -webkit-animation-delay: 5.8s;}
+.petal span:nth-of-type(14n) { -webkit-animation-delay: -0.1s;}
+.petal span:nth-of-type(15n) { -webkit-animation-delay: 6.3s;}
+.petal span:nth-of-type(16n) { -webkit-animation-delay: -1s;}
+.petal span:nth-of-type(17n) { -webkit-animation-delay: 7.4s;}
+.petal span:nth-of-type(18n) { -webkit-animation-delay: -0.3s;}
+.petal span:nth-of-type(19n) { -webkit-animation-delay: 8.3s;}
+.petal span:nth-of-type(20n) { -webkit-animation-delay: -0.6s;}
+.petal span:nth-of-type(21n) { -webkit-animation-delay: 7.7s;}
+
+.petal span:nth-of-type(2n+2) {
+    background: linear-gradient(to right, #fffbd5, #F15F79);
+}
+
+.petal span:nth-of-type(3n+1) {
+    background: linear-gradient(to right, #DD5E89, #F7BB97);
+}
+
+.petal span:nth-of-type(3n+2) {
+    border-radius: 20px 1px;
+}
+.petal span:nth-of-type(3n+3) {
+    transform: rotateX(-180deg);
+}
+
+.petal span:nth-of-type(3n+2) {
+    animation-duration: 12sec;
+}
+
+.petal span:nth-of-type(4n+2) {
+    animation-duration: 9sec;
+}
+
+.petal span:nth-of-type(5n+2) {
+    width: 12px;
+    height: 12px;
+    box-shadow: 1.5px 1.5px 8px #fc7bd1;
+}
+
+.petal span:nth-of-type(4n+3) {
+    width: 10px;
+    height: 10px;
+    box-shadow: 1px 1px 6px #fc7bd1;
+}
+.petal span:nth-of-type(n)    { height:23px; width:30px; }
+
+.petal span:nth-of-type(2n+1)    { height:11px; width:16px; }
+
+.petal span:nth-of-type(3n+2)  { height:17px; width:23px; }
+
+@-webkit-keyframes fallingSakura1 {
+    0% {
+        -webkit-transform:
+            translate3d(0,0,0)
+            rotateX(0deg);
+        opacity: 1;
+    }  
+    
+    100% {
+        -webkit-transform:
+            translate3d(400px,1200px,0px)
+            rotateX(-290deg);
+        opacity: 0.3;
+    }
+}
+
+@-webkit-keyframes fallingSakura2 {
+    0% {
+        -webkit-transform:
+            translate3d(0,0,0)
+            rotateX(-20deg);
+    opacity: 1;
+    }  
+    
+    100% {
+        -webkit-transform:
+            translate3d(200px,1200px,0px)
+            rotateX(-70deg);
+            opacity: 0.2;
+    }
+}
+
+@-webkit-keyframes fallingSakura3 {
+    0% {
+        -webkit-transform:
+            translate3d(0,0,0)
+            rotateX(90deg);
+    opacity: 1;
+    }
+    
+    100% {
+        -webkit-transform:
+            translate3d(500px,1200px,0px)
+            rotateX(290deg);
+        opacity: 0;
+    }
+}
+
