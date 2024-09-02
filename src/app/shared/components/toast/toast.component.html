@@ -4,7 +4,7 @@
      [autohide]="true"
      (hidden)="toastService.showToast = false"
      [delay]="5000"
-     [class.bg-success] = "true">
-     {{  toastService.toastText }}
+     [class.bg-white] = "true">
+     <div class="toast-div"><i class="bi bi-check-circle-fill text-success me-2 mb-1 fs-5"></i>  {{  toastService.toastText }} </div>
     </ngb-toast>
   }

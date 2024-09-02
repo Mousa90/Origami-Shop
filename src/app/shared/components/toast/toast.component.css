@@ -1,15 +1,27 @@
 /* Default styles for all screen sizes */
-.bg-success {
-  color: white;
-  font-weight: 500;
-  border: 1px solid #319154;
-  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.7);
+.bg-white {
+  border: 1px solid var(--success);
+}
+.sss, i.text-success {
+  height: 20px;         
+  line-height: 10px;  
+  vertical-align: middle;
+  display: inline-block;
 }
 
 /* Very small devices (phones, 480px and below) */
 @media only screen and (max-width: 480px) {
-  .bg-success {
+  .bg-white {
     width: 100%;
-    font-size: 13px;
+  }
+  .toast-div, i.text-success {
+    height: auto;        
+    margin-top: 5px;
+  }
+}
+
+@media only screen and (max-width: 365px) {
+  .toast-div, i.text-success {       
+    margin-top: 0;
   }
 }
